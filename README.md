@@ -25,7 +25,7 @@ Modern ve minimalist tasarıma sahip kişisel portfolyo websitesi. Next.js, Type
 
 1. Repoyu klonlayın:
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/musakarakilic/portfolio.git
 ```
 
 2. Proje dizinine gidin:
@@ -60,13 +60,12 @@ portfolio/
 
 ## 🌐 Canlı Demo | Live Demo
 
-[https://musa-portfolio.vercel.app](https://musa-portfolio.vercel.app)
+[https://portfolio-oyxu4c40x-musakarakilics-projects.vercel.app](https://portfolio-oyxu4c40x-musakarakilics-projects.vercel.app)
 
 ## 📫 İletişim | Contact
 
-- Website: [musa-portfolio.vercel.app](https://musa-portfolio.vercel.app)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Musa Karakılıç](https://linkedin.com/in/yourusername)
+- Website: [portfolio-oyxu4c40x-musakarakilics-projects.vercel.app](https://portfolio-oyxu4c40x-musakarakilics-projects.vercel.app)
+- GitHub: [@musakarakilic](https://github.com/musakarakilic)
 
 ## 📄 Lisans | License
 
