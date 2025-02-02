@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="text-center max-w-5xl mx-auto mb-24">
               {/* Main heading */}
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
-                Hi, I'm <span className="bg-gradient-to-r from-violet-600 to-cyan-600 text-transparent bg-clip-text">Musa Karakılıç</span>
+                Hi, I&apos;m <span className="bg-gradient-to-r from-violet-600 to-cyan-600 text-transparent bg-clip-text">Musa Karakılıç</span>
                 <br />
                 <span className="text-3xl sm:text-4xl md:text-5xl block mt-4">I build things for the web</span>
               </h1>

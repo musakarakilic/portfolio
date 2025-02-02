@@ -67,7 +67,7 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">Contact</h4>
             <div className="space-y-2">
               <p className="text-gray-500 text-sm">
-                Let's create something amazing together or you can just hi to me
+                Let&apos;s create something amazing together or you can just hi to me
               </p>
               <a 
                 href="mailto:contact@example.com"
