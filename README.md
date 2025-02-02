@@ -60,11 +60,11 @@ portfolio/
 
 ## 🌐 Canlı Demo | Live Demo
 
-[https://portfolio-oyxu4c40x-musakarakilics-projects.vercel.app](https://portfolio-oyxu4c40x-musakarakilics-projects.vercel.app)
+[https://portfolio-eight-theta-18.vercel.app](https://portfolio-eight-theta-18.vercel.app)
 
 ## 📫 İletişim | Contact
 
-- Website: [portfolio-oyxu4c40x-musakarakilics-projects.vercel.app](https://portfolio-oyxu4c40x-musakarakilics-projects.vercel.app)
+- Website: [portfolio-eight-theta-18.vercel.app](https://portfolio-eight-theta-18.vercel.app)
 - GitHub: [@musakarakilic](https://github.com/musakarakilic)
 
 ## 📄 Lisans | License
