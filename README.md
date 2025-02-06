@@ -64,6 +64,7 @@ portfolio/
 
 ## 📫 İletişim | Contact
 
+- Mail: musakarakilic@gmail.com
 - Website: [portfolio-eight-theta-18.vercel.app](https://portfolio-eight-theta-18.vercel.app)
 - GitHub: [@musakarakilic](https://github.com/musakarakilic)
 
