@@ -23,7 +23,7 @@ const Hero = () => {
 
               {/* Tech stack pills */}
               <div className="inline-flex flex-wrap justify-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 mb-8">
-                {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS'].map((tech) => (
+                {['React', 'Vue.js', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS'].map((tech) => (
                   <span
                     key={tech}
                     className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-xl text-sm font-medium text-gray-800 border border-white/20 hover:bg-white/30 transition-all duration-300"
