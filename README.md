@@ -1,54 +1,54 @@
 # Musa Karakılıç - Portfolio Website
 
-Modern ve minimalist tasarıma sahip kişisel portfolyo websitesi. Next.js, TypeScript ve Tailwind CSS kullanılarak geliştirilmiştir.
+Personal portfolio website with a modern and minimalist design. Developed using Next.js, TypeScript, and Tailwind CSS.
 
 ![Portfolio Preview](public/preview.png)
 
-## 🚀 Özellikler | Features
+## 🚀 Features
 
-- ⚡️ Next.js 14 ile geliştirilmiş modern web uygulaması
-- 💎 Tailwind CSS ile responsive ve şık tasarım
-- 🎨 Elegant animasyonlar ve geçişler
-- 📱 Tüm cihazlarda uyumlu tasarım
-- 🌙 Modern ve minimalist arayüz
-- 📬 İletişim formu
-- 🔍 SEO optimizasyonu
+- ⚡️ Modern web application developed with Next.js 14
+- 💎 Responsive and elegant design with Tailwind CSS
+- 🎨 Elegant animations and transitions
+- 📱 Design compatible with all devices
+- 🌙 Modern and minimalist interface
+- 📬 Contact form
+- 🔍 SEO optimization
 
-## 🛠️ Teknolojiler | Tech Stack
+## 🛠️ Tech Stack
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
 
-## 🚀 Kurulum | Installation
+## 🚀 Installation
 
-1. Repoyu klonlayın:
+1. Clone the repository:
 ```bash
 git clone https://github.com/musakarakilic/portfolio.git
 ```
 
-2. Proje dizinine gidin:
+2. Navigate to the project directory:
 ```bash
 cd portfolio
 ```
 
-3. Bağımlılıkları yükleyin:
+3. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Geliştirme sunucusunu başlatın:
+4. Start the development server:
 ```bash
 npm run dev
 ```
 
-5. Tarayıcınızda açın:
+5. Open in your browser:
 ```
 http://localhost:3000
 ```
 
-## 📝 Yapı | Structure
+## 📝 Structure
 
 ```
 portfolio/
@@ -58,20 +58,20 @@ portfolio/
 └── styles/           # Global styles
 ```
 
-## 🌐 Canlı Demo | Live Demo
+## 🌐 Live Demo
 
 [https://portfolio-eight-theta-18.vercel.app](https://portfolio-eight-theta-18.vercel.app)
 
-## 📫 İletişim | Contact
+## 📫 Contact
 
-- Mail: musakarakilic@gmail.com
+- Email: musakarakilic@gmail.com
 - Website: [portfolio-eight-theta-18.vercel.app](https://portfolio-eight-theta-18.vercel.app)
 - GitHub: [@musakarakilic](https://github.com/musakarakilic)
 
-## 📄 Lisans | License
+## 📄 License
 
-Bu proje [MIT](LICENSE) lisansı altında lisanslanmıştır.
+This project is licensed under the [MIT](LICENSE) license.
 
 ---
 
-⭐️ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
+⭐️ Don't forget to give a star if you liked this project!

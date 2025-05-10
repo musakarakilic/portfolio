@@ -4,7 +4,7 @@ import SectionTitle from './SectionTitle';
 const services = [
   {
     title: "Web Development",
-    description: "Modern ve responsive web uygulamaları geliştirme, performans optimizasyonu ve SEO uyumlu kodlama.",
+    description: "Developing modern and responsive web applications, performance optimization, and SEO-friendly coding.",
     category: "Development",
     rating: "4.9",
     progress: "100%",
@@ -20,7 +20,7 @@ const services = [
   },
   {
     title: "Mobile Development",
-    description: "Cross-platform mobil uygulamalar geliştirme, native performans ve kullanıcı deneyimi odaklı tasarım.",
+    description: "Developing cross-platform mobile applications with native performance and user experience-focused design.",
     category: "Development",
     rating: "4.7",
     progress: "95%",
@@ -36,7 +36,7 @@ const services = [
   },
   {
     title: "UI/UX Design",
-    description: "Kullanıcı odaklı arayüz tasarımı, wireframe ve prototip oluşturma, kullanılabilirlik testleri.",
+    description: "User-centered interface design, creating wireframes and prototypes, usability testing.",
     category: "Design",
     rating: "4.8",
     progress: "100%",

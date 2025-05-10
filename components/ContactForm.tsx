@@ -8,12 +8,53 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
     email: '',
     message: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    success?: boolean;
+    message?: string;
+  }>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-    onClose();
+    setIsSubmitting(true);
+    setSubmitStatus({});
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        setSubmitStatus({
+          success: true,
+          message: 'Your message has been sent successfully!'
+        });
+        setFormData({ name: '', email: '', message: '' });
+        // Close form after 3 seconds
+        setTimeout(() => {
+          onClose();
+        }, 3000);
+      } else {
+        setSubmitStatus({
+          success: false,
+          message: data.error || 'An error occurred while sending your message.'
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        success: false,
+        message: 'Connection error. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -37,6 +78,12 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
 
           <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
           
+          {submitStatus.message && (
+            <div className={`mb-4 p-3 rounded-lg ${submitStatus.success ? 'bg-green-500/20 text-green-200' : 'bg-red-500/20 text-red-200'}`}>
+              {submitStatus.message}
+            </div>
+          )}
+          
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
@@ -50,6 +97,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/60 focus:border-transparent transition-all"
                 placeholder="John Doe"
                 required
+                disabled={isSubmitting}
               />
             </div>
             
@@ -65,6 +113,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/60 focus:border-transparent transition-all"
                 placeholder="john@example.com"
                 required
+                disabled={isSubmitting}
               />
             </div>
             
@@ -80,14 +129,28 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/60 focus:border-transparent transition-all resize-none"
                 placeholder="Your message..."
                 required
+                disabled={isSubmitting}
               ></textarea>
             </div>
             
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-gradient-to-r from-blue-400/80 to-cyan-400/80 hover:from-blue-400 hover:to-cyan-400 text-white rounded-xl font-medium tracking-wide transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400/60 focus:ring-offset-2 focus:ring-offset-gray-900"
+              disabled={isSubmitting}
+              className={`w-full py-3 px-6 ${
+                isSubmitting 
+                  ? 'bg-gray-500/80 cursor-not-allowed' 
+                  : 'bg-gradient-to-r from-blue-400/80 to-cyan-400/80 hover:from-blue-400 hover:to-cyan-400'
+              } text-white rounded-xl font-medium tracking-wide transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400/60 focus:ring-offset-2 focus:ring-offset-gray-900 flex items-center justify-center`}
             >
-              Send Message
+              {isSubmitting ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : 'Send Message'}
             </button>
           </form>
         </div>

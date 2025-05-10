@@ -13,7 +13,7 @@ const Navbar = () => {
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);
     if (element) {
-      const yOffset = -120; // Navbar yüksekliği için offset
+      const yOffset = -120; // Offset for navbar height
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
       setIsOpen(false);

@@ -5,7 +5,7 @@ import SectionTitle from './SectionTitle';
 const skillCategories = [
   {
     title: "Frontend Development",
-    description: "Modern web teknolojileri ile kullanıcı deneyimi odaklı arayüz geliştirme.",
+    description: "User experience focused interface development with modern web technologies.",
     category: "Development",
     rating: "4.9",
     progress: "100%",
@@ -16,7 +16,7 @@ const skillCategories = [
   },
   {
     title: "Backend Development",
-    description: "Ölçeklenebilir ve güvenli backend sistemleri geliştirme.",
+    description: "Scalable and secure backend systems development.",
     category: "Development",
     rating: "4.8",
     progress: "95%",
@@ -27,7 +27,7 @@ const skillCategories = [
   },
   {
     title: "DevOps & Tools",
-    description: "Modern geliştirme araçları ve DevOps pratikleri.",
+    description: "Modern development tools and DevOps practices.",
     category: "Development",
     rating: "4.7",
     progress: "90%",
@@ -65,10 +65,10 @@ const AboutMe = () => {
                   Full Stack Developer & UI/UX Designer
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Merhaba! Ben bir Full Stack Developer ve UI/UX tasarımcısıyım. Modern web teknolojileri ve kullanıcı deneyimi konularında tutkulu bir şekilde çalışıyorum. Her projede en iyi pratikleri ve en son teknolojileri kullanarak yenilikçi çözümler üretmeye odaklanıyorum.
+                  Hello! I'm a Full Stack Developer and UI/UX designer. I work passionately with modern web technologies and user experience. I focus on producing innovative solutions using best practices and the latest technologies in every project.
                 </p>
                 <p className="text-gray-600">
-                  Amacım, kullanıcı dostu ve yüksek performanslı web uygulamaları geliştirerek dijital dünyada fark yaratmak. Sürekli öğrenme ve gelişme odaklı yaklaşımımla, her projeye özgün değer katmaya çalışıyorum.
+                  My goal is to make a difference in the digital world by developing user-friendly and high-performance web applications. With my continuous learning and development-focused approach, I strive to add unique value to each project.
                 </p>
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.4),transparent_70%)]" />
