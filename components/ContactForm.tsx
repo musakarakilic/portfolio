@@ -47,7 +47,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
           message: data.error || 'An error occurred while sending your message.'
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         success: false,
         message: 'Connection error. Please try again later.'

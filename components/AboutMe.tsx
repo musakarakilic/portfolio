@@ -65,7 +65,7 @@ const AboutMe = () => {
                   Full Stack Developer & UI/UX Designer
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Hello! I'm a Full Stack Developer and UI/UX designer. I work passionately with modern web technologies and user experience. I focus on producing innovative solutions using best practices and the latest technologies in every project.
+                  Hello! I&apos;m a Full Stack Developer and UI/UX designer. I work passionately with modern web technologies and user experience. I focus on producing innovative solutions using best practices and the latest technologies in every project.
                 </p>
                 <p className="text-gray-600">
                   My goal is to make a difference in the digital world by developing user-friendly and high-performance web applications. With my continuous learning and development-focused approach, I strive to add unique value to each project.
