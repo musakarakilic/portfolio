@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import profileImg from '@/public/images/profile.jpg';
 import SectionTitle from './SectionTitle';
 
 const skillCategories = [
@@ -50,10 +51,12 @@ const AboutMe = () => {
               {/* Image */}
               <div className="relative aspect-[4/3] w-full max-w-lg mx-auto lg:max-w-none rounded-3xl overflow-hidden bg-gradient-to-br from-blue-400/10 to-purple-400/10">
                 <Image
-                  src="/images/profile.jpg"
+                  src={profileImg}
                   alt="Profile"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.4),transparent_70%)]" />
