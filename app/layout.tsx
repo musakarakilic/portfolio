@@ -23,6 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <meta name="google-site-verification" content="e4j-hIPwlsow_geSdNH66tJxg6Ld0Bto_5xGJwAoErE" />
+      </head>
       <body className={`${jetbrainsMono.className} min-h-screen`}>
         <Navbar />
         <main>
