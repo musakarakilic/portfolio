@@ -18,12 +18,12 @@ const Hero = () => {
 
               {/* Subheading */}
               <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-                A passionate web developer focused on creating intuitive and performant user experiences with modern technologies
+                Full-stack software engineer building real-time multimodal AI systems, edge computer vision HUDs, and production web platforms
               </p>
 
               {/* Tech stack pills */}
               <div className="inline-flex flex-wrap justify-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 mb-8">
-                {['React', 'Vue.js', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS'].map((tech) => (
+                {['TypeScript', 'Vue.js', 'Next.js', 'Python', 'FastAPI', 'Gemini Live API', 'Docker'].map((tech) => (
                   <span
                     key={tech}
                     className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-xl text-sm font-medium text-gray-800 border border-white/20 hover:bg-white/30 transition-all duration-300"
@@ -37,8 +37,7 @@ const Hero = () => {
               <div className="flex justify-center gap-4 mb-16">
                 {[
                   { href: 'https://github.com/musakarakilic', icon: 'github' },
-                  { href: 'https://linkedin.com/in/', icon: 'linkedin' },
-                  { href: 'https://x.com/', icon: 'twitter' }
+                  { href: 'https://www.linkedin.com/in/musa-karakilic/', icon: 'linkedin' }
                 ].map(({ href, icon }) => (
                   <a
                     key={icon}

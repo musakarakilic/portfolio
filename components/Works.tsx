@@ -3,79 +3,68 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  year: string;
+  status: string;
+  category: string;
+  tech: string[];
+  bgColor: string;
+  iconBgColor: string;
+  hoverBgColor: string;
+  githubUrl: string;
+  liveUrl?: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "TriageVoice",
+    description: "Real-time voice & vision clinical triage platform combining Gemini 3.8 Live with a deterministic safety policy engine (0% emergency false negatives) and automated SBAR clinician handoffs.",
+    year: "2026",
+    status: "AI · Clinical Systems",
+    category: "Multimodal AI - Full Stack",
+    tech: ["Vue 3", "TypeScript", "FastAPI", "Gemini Live API", "SQLite"],
+    bgColor: "bg-teal-400/10",
+    iconBgColor: "bg-teal-100",
+    hoverBgColor: "hover:bg-teal-400/20",
+    githubUrl: "https://github.com/musakarakilic/triagevoice",
+  },
+  {
+    title: "Optic HUD (AI Glasses MVP)",
+    description: "Hands-free smart-glasses repair & spatial assistance HUD fusing sub-40ms YOLOE-11m-seg + SAM 2.1 Tiny edge segmentation with non-blocking Gemini 3.8 Live voice guidance.",
+    year: "2026",
+    status: "Edge Vision · Wearable HUD",
+    category: "Computer Vision - Multimodal AI",
+    tech: ["TypeScript", "Vite", "PyTorch", "YOLOE / SAM 2.1", "Gemini Live API"],
+    bgColor: "bg-indigo-400/10",
+    iconBgColor: "bg-indigo-100",
+    hoverBgColor: "hover:bg-indigo-400/20",
+    githubUrl: "https://github.com/musakarakilic/optic-hud",
+  },
+  {
+    title: "Aegion Yachts Charter",
+    description: "Production-grade yacht charter platform indexing 780+ luxury yachts with PostGIS geospatial filtering, Redis caching, headless Directus CMS, and containerized Ubuntu/Nginx deployment.",
+    year: "2025",
+    status: "Production Architecture",
+    category: "Charter Platform - Full Stack",
+    tech: ["Vue 3", "Tailwind", "Directus", "PostGIS", "Docker"],
+    bgColor: "bg-emerald-400/10",
+    iconBgColor: "bg-emerald-100",
+    hoverBgColor: "hover:bg-emerald-400/20",
+    githubUrl: "https://github.com/musakarakilic/aegion-yachts-platform",
+  },
   {
     title: "Carrier E-Commerce",
-    description: "E-commerce platform built with Vue.js and Node.js, database is MongoDB and featuring Stripe payment integration.",
-    rating: "4.7",
-    progress: "100%",
-    category:[ "E-Commerce ","- Full Stack"],
+    description: "Full-stack e-commerce platform built with Vue.js, Node.js, and MongoDB featuring role-based inventory management, cart workflows, and Stripe payment integration.",
+    year: "2024",
+    status: "Full Stack",
+    category: "E-Commerce - Full Stack",
     tech: ["Vue.js", "Node.js", "MongoDB", "Stripe"],
     bgColor: "bg-blue-400/10",
     iconBgColor: "bg-blue-100",
     hoverBgColor: "hover:bg-blue-400/20",
     githubUrl: "https://github.com/musakarakilic/carrier-ecommerce",
-    liveUrl: "https://carrier-ecommerce.vercel.app/",
-  },
-  {
-    title: "Aegion Yachts Charter",
-    description: "Professional yacht charter platform featuring 800+ luxury yachts with SEO optimization, built with modern tech stack and deployed on Ubuntu server.",
-    rating: "4.8",
-    progress: "100%",
-    category: ["Charter Platform", "- Full Stack"],
-    tech: ["Vue.js", "Tailwind", "Directus", "Docker", "Nginx"],
-    bgColor: "bg-emerald-400/10",
-    iconBgColor: "bg-emerald-100",
-    hoverBgColor: "hover:bg-emerald-400/20",
-    liveUrl: "https://aegionyachts.com",
-  },
-  {
-    title: "Real-time Chat App",
-    description: "Feature-rich messaging platform with end-to-end encryption, file sharing, and group chat functionality.",
-    rating: "4.6",
-    progress: "100%",
-    category: "Web App",
-    tech: ["React", "Socket.io", "Redis"],
-    bgColor: "bg-purple-400/10",
-    iconBgColor: "bg-purple-100",
-    hoverBgColor: "hover:bg-purple-400/20",
-    githubUrl: "https://github.com/musakarakilic",
-  },
-  {
-    title: "Portfolio Generator",
-    description: "Dynamic portfolio website generator with customizable themes and content management system.",
-    rating: "4.7",
-    progress: "95%",
-    category: "Web Tool",
-    tech: ["Vue.js", "GraphQL", "AWS"],
-    bgColor: "bg-pink-400/10",
-    iconBgColor: "bg-pink-100",
-    hoverBgColor: "hover:bg-pink-400/20",
-    githubUrl: "https://github.com/musakarakilic",
-  },
-  {
-    title: "DevOps Dashboard",
-    description: "Comprehensive DevOps monitoring dashboard with real-time metrics and alert system.",
-    rating: "4.4",
-    progress: "85%",
-    category: "DevOps",
-    tech: ["React", "Docker", "Kubernetes"],
-    bgColor: "bg-orange-400/10",
-    iconBgColor: "bg-orange-100",
-    hoverBgColor: "hover:bg-orange-400/20",
-    githubUrl: "https://github.com/musakarakilic",
-  },
-  {
-    title: "Blockchain Explorer",
-    description: "Cryptocurrency blockchain explorer with transaction tracking and wallet management features.",
-    rating: "4.3",
-    progress: "80%",
-    category: "Blockchain",
-    tech: ["TypeScript", "Web3.js", "Node.js"],
-    bgColor: "bg-teal-400/10",
-    iconBgColor: "bg-teal-100",
-    hoverBgColor: "hover:bg-teal-400/20",
-    githubUrl: "https://github.com/musakarakilic",
   }
 ];
 
@@ -85,16 +74,18 @@ const Works = () => {
       <div className="container mx-auto px-4">
         <SectionTitle title="Works" />
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project) => {
+              const cardHref = project.liveUrl || project.githubUrl;
+              return (
               <div 
                 key={project.title}
-                className={`relative group rounded-3xl overflow-hidden ${project.bgColor} ${project.hoverBgColor} transition-all duration-300 aspect-[4/3] p-6 flex flex-col`}
+                className={`relative group rounded-3xl overflow-hidden ${project.bgColor} ${project.hoverBgColor} transition-all duration-300 min-h-[290px] p-6 flex flex-col`}
               >
                 {/* Project link wrapper - makes the entire card clickable */}
-                {project.liveUrl && (
+                {cardHref && (
                   <a 
-                    href={project.liveUrl}
+                    href={cardHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="absolute inset-0 z-0"
@@ -136,11 +127,11 @@ const Works = () => {
                 </div>
 
                 {/* Content */}
-                <div className="flex-grow relative z-10">
+                <div className="flex-grow relative z-10 pointer-events-none">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -155,25 +146,19 @@ const Works = () => {
                   </div>
                 </div>
 
-                {/* Rating and Progress */}
-                <div className="flex items-center gap-4 mt-4 relative z-10">
-                  <div className="flex items-center gap-1">
-                    <svg className="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="font-medium text-gray-900">{project.rating}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <span>{project.progress}</span>
-                  </div>
+                {/* Year and Status */}
+                <div className="flex items-center gap-4 mt-5 relative z-10 pointer-events-none">
+                  <span className="font-semibold text-sm text-gray-900">{project.year}</span>
+                  <span className="text-sm text-gray-600">{project.status}</span>
                 </div>
 
                 {/* Hover Effect Wave Pattern */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-10 pointer-events-none">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.4),transparent_70%)]" />
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
