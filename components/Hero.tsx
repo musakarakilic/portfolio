@@ -8,33 +8,52 @@ const Hero = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 lg:pt-40">
           <div className="flex flex-col items-center justify-center min-h-[calc(100vh-12rem)]">
             {/* Main Content */}
-            <div className="text-center max-w-5xl mx-auto mb-24">
+            <div className="text-center max-w-5xl mx-auto mb-16">
               {/* Main heading */}
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
                 Hi, I&apos;m <span className="bg-gradient-to-r from-violet-600 to-cyan-600 text-transparent bg-clip-text">Musa Karakılıç</span>
                 <br />
-                <span className="text-3xl sm:text-4xl md:text-5xl block mt-4">I build things for the web</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl block mt-3">I build things for the web</span>
               </h1>
 
               {/* Subheading */}
-              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
                 Full-stack software engineer building real-time multimodal AI systems, edge computer vision HUDs, and production web platforms
               </p>
 
-              {/* Tech stack pills */}
-              <div className="inline-flex flex-wrap justify-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 mb-8">
-                {['TypeScript', 'Vue.js', 'Next.js', 'Python', 'FastAPI', 'Gemini Live API', 'Docker'].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-xl text-sm font-medium text-gray-800 border border-white/20 hover:bg-white/30 transition-all duration-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
+              {/* Services & Tech stack toolbox */}
+              <div className="inline-flex flex-col items-center gap-3 p-4 bg-white/15 backdrop-blur-sm rounded-2xl border border-white/25 mb-8">
+                <div className="flex flex-wrap justify-center gap-2">
+                  {[
+                    'Multimodal AI Systems',
+                    'Edge Computer Vision',
+                    'Full-Stack Web Platforms',
+                    'Backend & DevOps',
+                  ].map((service) => (
+                    <a
+                      key={service}
+                      href="#services"
+                      className="px-3.5 py-1.5 bg-violet-600/10 hover:bg-violet-600/20 text-violet-900 rounded-xl text-xs sm:text-sm font-semibold border border-violet-500/20 transition-all duration-300"
+                    >
+                      {service}
+                    </a>
+                  ))}
+                </div>
+                <div className="w-full h-px bg-white/30" />
+                <div className="flex flex-wrap justify-center gap-2.5">
+                  {['TypeScript', 'Vue.js', 'Next.js', 'Python', 'FastAPI', 'Gemini Live API', 'Docker'].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3.5 py-1.5 bg-white/30 backdrop-blur-sm rounded-xl text-xs sm:text-sm font-medium text-gray-800 border border-white/30 hover:bg-white/45 transition-all duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Social Media Links */}
-              <div className="flex justify-center gap-4 mb-16">
+              <div className="flex justify-center gap-4 mb-6">
                 {[
                   { href: 'https://github.com/musakarakilic', icon: 'github' },
                   { href: 'https://www.linkedin.com/in/musa-karakilic/', icon: 'linkedin' }

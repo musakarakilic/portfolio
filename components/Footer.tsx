@@ -23,10 +23,10 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">Navigation</h4>
             <ul className="space-y-2">
               {[
-                { name: 'About', href: '#about' },
-                { name: 'Services', href: '#services' },
                 { name: 'Works', href: '#works' },
-                { name: 'Contact', href: '#contact' }
+                { name: 'Services', href: '#services' },
+                { name: 'About', href: '#about' },
+                { name: 'Contact', href: 'mailto:musakarakilic@gmail.com' }
               ].map((item) => (
                 <li key={item.name}>
                   <a
@@ -45,10 +45,10 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">Services</h4>
             <ul className="space-y-2">
               {[
-                { name: 'Web Development', href: '#services' },
-                { name: 'Mobile Development', href: '#services' },
-                { name: 'UI/UX Design', href: '#services' },
-                { name: 'DevOps Solutions', href: '#services' }
+                { name: 'Multimodal AI Systems', href: '#services' },
+                { name: 'Edge Computer Vision & HUDs', href: '#services' },
+                { name: 'Full-Stack Web Platforms', href: '#services' },
+                { name: 'Backend, Cloud & DevOps', href: '#services' }
               ].map((service) => (
                 <li key={service.name}>
                   <a
@@ -67,7 +67,7 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-gray-900 uppercase mb-4">Contact</h4>
             <div className="space-y-2">
               <p className="text-gray-500 text-sm">
-                Let&apos;s create something amazing together or you can just hi to me
+                Let&apos;s create something amazing together or you can just say hi to me.
               </p>
               <a 
                 href="mailto:musakarakilic@gmail.com"
@@ -81,7 +81,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="pt-8 border-t border-gray-100">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:pr-20">
             <p className="text-sm text-gray-400">
               © {currentYear} Musa Karakılıç. All rights reserved.
             </p>

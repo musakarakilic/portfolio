@@ -70,7 +70,7 @@ const projects: Project[] = [
 
 const Works = () => {
   return (
-    <section id="works" className="py-20">
+    <div className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle title="Works" />
         <div className="max-w-7xl mx-auto">
@@ -162,7 +162,7 @@ const Works = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -5,9 +5,9 @@ import AboutMe from '@/components/AboutMe';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-r from-rose-100 to-teal-100">
+    <div className="relative min-h-screen bg-gradient-to-r from-rose-100 to-teal-100">
       {/* Animated gradient backgrounds */}
-      <div className="fixed inset-0">
+      <div className="fixed inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-200/40 via-pink-200/40 to-cyan-200/40 animate-gradient-x" />
         <div className="absolute inset-0 bg-gradient-to-b from-yellow-100/30 via-green-100/30 to-blue-100/30 animate-gradient-y" />
         
@@ -35,6 +35,6 @@ export default function Home() {
           <AboutMe />
         </section>
       </div>
-    </main>
+    </div>
   );
 }
