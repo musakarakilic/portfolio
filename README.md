@@ -2,26 +2,25 @@
 
 Personal portfolio website with a modern and minimalist design. Developed using Next.js, TypeScript, and Tailwind CSS.
 
-![Portfolio Preview](public/preview.png)
 
-## 🚀 Features
+##  Features
 
-- ⚡️ Modern web application developed with Next.js 14
-- 💎 Responsive and elegant design with Tailwind CSS
-- 🎨 Elegant animations and transitions
-- 📱 Design compatible with all devices
-- 🌙 Modern and minimalist interface
-- 📬 Contact form
-- 🔍 SEO optimization
+-  Modern web application developed with Next.js 14
+-  Responsive and elegant design with Tailwind CSS
+-  Elegant animations and transitions
+-  Design compatible with all devices
+-  Modern and minimalist interface
+-  Contact form
+-  SEO optimization
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
 
-## 🚀 Installation
+##  Installation
 
 1. Clone the repository:
 ```bash
@@ -48,7 +47,7 @@ npm run dev
 http://localhost:3000
 ```
 
-## 📝 Structure
+##  Structure
 
 ```
 portfolio/
@@ -58,20 +57,13 @@ portfolio/
 └── styles/           # Global styles
 ```
 
-## 🌐 Live Demo
-
-[https://portfolio-eight-theta-18.vercel.app](https://portfolio-eight-theta-18.vercel.app)
-
-## 📫 Contact
+##  Contact
 
 - Email: musakarakilic@gmail.com
-- Website: [portfolio-eight-theta-18.vercel.app](https://portfolio-eight-theta-18.vercel.app)
 - GitHub: [@musakarakilic](https://github.com/musakarakilic)
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT](LICENSE) license.
 
 ---
-
-⭐️ Don't forget to give a star if you liked this project!
