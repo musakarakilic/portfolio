@@ -13,13 +13,6 @@ Personal portfolio website with a modern and minimalist design. Developed using 
 -  Contact form
 -  SEO optimization
 
-##  Tech Stack
-
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [React](https://reactjs.org/)
-
 ##  Installation
 
 1. Clone the repository:
